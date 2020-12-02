@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bg_layout"
+        android:background="@drawable/walkthrough_bg" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/simcareer_logo"
+        android:background="@drawable/simcareer_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/benvenutoin_txt"
+        android:text="Benvenuto in"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_light_italic"
+        android:textSize="30dp"
+        android:letterSpacing="0"
+        android:layout_below="@+id/simcareer_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/simcareer_txt"
+        android:text="SimCareer"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_extrabold_italic"
+        android:textSize="38dp"
+        android:letterSpacing="0"
+        android:layout_below="@+id/benvenutoin_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/greetings_txt"
+        android:text="Grazie a quest’app avrai la possibilità di scoprire e registrarti ai nostri campionati in pochi semplici passi"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_medium_italic"
+        android:textSize="16dp"
+        android:letterSpacing="0"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:gravity="center"
+        android:layout_below="@+id/simcareer_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_btn"
+        android:orientation="horizontal"
+        android:layout_below="@+id/greetings_txt"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+
+
+        <Button
+            android:id="@+id/skip_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:letterSpacing="0"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="0"
+            android:text="SALTA INTRO"
+            app:backgroundTint="@android:color/transparent"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp"
+            android:onClick="skip_intro"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/intro_btn"
+            android:text="VEDI INTRO"
+            android:textColor="@color/red"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:letterSpacing="0"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:backgroundTint="@color/white"
+            android:onClick="vedi_intro"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

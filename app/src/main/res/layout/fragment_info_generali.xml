@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoGeneraliFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_generaliUI"
+            android:orientation="horizontal"
+            android:background="@drawable/border_bottom_red"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/info_generali_no_outline" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:letterSpacing="0"
+                android:text="INFO GENERALI"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/back_btn"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/exit_btn" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_generaliUI"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bullet_circle"
+                    android:layout_marginTop="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ISCRIZIONE CAMPIONATO SOGGETTA A DONAZIONE MINIMA DI 8 EURO A PILOTA"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bullet_circle"
+                    android:layout_marginTop="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DATA CHIUSURA ISCRIZIONI SABATO 25 GENNAIO 2020"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bullet_circle"
+                    android:layout_marginTop="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIMITE MAX PILOTI AMMESSI: 30"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bullet_circle"
+                    android:layout_marginTop="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIMULATORE UTILIZZATO: rFactor2"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="15dp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/logo_simulatore"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

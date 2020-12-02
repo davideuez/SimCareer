@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfermaDisiscrizioneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/iscrizionecompletata"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LA CANCELLAZIONE DELL’ISCRIZIONEÈ ANDATA A BUON FINE."
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIENI D’OCCHIO I CAMPIONATI ATTIVI PER NON PERDERTI LE NOVITÀ"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/go_home"
+            android:text="VAI ALLA HOME"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:letterSpacing="0"
+            android:backgroundTint="#3FD679"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="30dp" />
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

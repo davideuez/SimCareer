@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registrazione_Preferenze">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/simcareer_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/benvenuto"
+                android:text="Benvenuto "
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nome_iscritto"
+                android:text=""
+                android:fontFamily="@font/montserrat_extrabold_italic"
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prima di cominciare ad utilizzare l’applicazione, raccontaci un po’ di te… "
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp" >
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/first_scheda"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <ImageView
+                    android:layout_width="53dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/coppa"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gara_preferita"
+                    android:text="NUMERO DI GARA PREFERITO"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/seconda_scheda"
+                android:orientation="vertical"
+                android:background="@drawable/border"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/favourite_circuit"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/circuito_preferito"
+                    android:text="CIRCUITO PREFERITO"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp" >
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/third_scheda"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/hated_circuit"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/circuito_odiato"
+                    android:text="CIRCUITO PIU ODIATO"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/fourth_scheda"
+                android:orientation="vertical"
+                android:background="@drawable/border"
+                android:layout_marginLeft="20dp"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:layout_width="82dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/favourite_car"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/auto_preferita"
+                    android:text="AUTO PREFERITA"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/comiciamo_btn"
+            android:text="COMINCIAMO"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:letterSpacing="0"
+            android:layout_gravity="center" />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

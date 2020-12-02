@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Walkthrough_3">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bg_layout"
+        android:background="@drawable/walkthrough_bg" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/referee_img"
+        android:background="@drawable/referee"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iscrizioni_txt"
+        android:text="NOVITà CORSE"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_medium_italic"
+        android:textSize="30dp"
+        android:letterSpacing="0"
+        android:layout_below="@+id/referee_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/novita_p"
+        android:text="Resta sempre aggiornato sulle gare alle quali ti sei iscritto, riuscendo a pensare a nuove strategie da utilizzare durante la corsa  "
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_medium_italic"
+        android:textSize="16dp"
+        android:letterSpacing="0"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:gravity="center"
+        android:layout_below="@+id/iscrizioni_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_btn"
+        android:orientation="horizontal"
+        android:layout_marginRight="150dp"
+        android:layout_below="@+id/novita_p"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true">
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/next_btn"
+            android:text="INIZIAMO"
+            android:textColor="@color/red"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:letterSpacing="0"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:backgroundTint="@color/white"
+            android:onClick="register"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

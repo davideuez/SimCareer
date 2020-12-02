@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Walkthrough_2">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bg_layout"
+        android:background="@drawable/walkthrough_bg" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bandiera_img"
+        android:background="@drawable/bandiera"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iscrizioni_txt"
+        android:text="LE TUE ISCRIZIONI"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_medium_italic"
+        android:textSize="30dp"
+        android:letterSpacing="0"
+        android:layout_below="@+id/bandiera_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/campionati_p"
+        android:text="Pronti, Partenza, VIA! Iscriviti in modo semplice e veloce ad ogni campionato selezionando l'auto ed il team che desideri"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_medium_italic"
+        android:textSize="16dp"
+        android:letterSpacing="0"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:gravity="center"
+        android:layout_below="@+id/iscrizioni_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_btn"
+        android:orientation="horizontal"
+        android:layout_marginRight="150dp"
+        android:layout_below="@+id/campionati_p"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true">
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/next_btn"
+            android:text="PROSSIMO"
+            android:textColor="@color/red"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:letterSpacing="0"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:backgroundTint="@color/white"
+            android:onClick="next"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

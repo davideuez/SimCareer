@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:background="@drawable/border_bottom"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+        <TableRow android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nome"
+                    android:text="Cristian Riva"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/team"
+                        android:layout_marginTop="5dp"/>
+
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nome_team"
+                        android:text="Handy Racing Team Green"
+                        android:fontFamily="@font/montserrat_light_italic"
+                        android:letterSpacing="0"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"/>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/car"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nome_auto"
+                        android:text="GOLF"
+                        android:fontFamily="@font/montserrat_light_italic"
+                        android:letterSpacing="0"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

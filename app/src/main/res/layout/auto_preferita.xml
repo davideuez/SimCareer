@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Auto_Preferita">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/simcareer_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <ImageView
+                    android:layout_width="82dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/favourite_car"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AUTO PREFERITA"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_volkswagen"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Volkswagen Golf"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_honda"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Honda Civic"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_peugeot"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Peugeot 308"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_hyundai"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Hyundai i30N"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_alfa"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Alfa Romeo Giulietta"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_lancia"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Lancia Delta"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_medium_italic"
+                    android:letterSpacing="0" />
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

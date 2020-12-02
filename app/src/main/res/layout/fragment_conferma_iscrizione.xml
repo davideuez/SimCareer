@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfermaIscrizioneFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/iscrizionecompletata"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMPLIMENTI, ISCRIZIONE EFFETTUATA"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="58dp"
+                android:layout_height="34dp"
+                android:background="@drawable/favourite_car"
+                android:layout_margin="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/auto_selezionata"
+                android:text="VOLKSWAGEN GOLF"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="39dp"
+                android:background="@drawable/team"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_selezionato"
+                android:text="Busters eRacing Team"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vedi_iscrizioni"
+            android:text="VEDI CAMPIONATI A CUI SEI ISCRITTO"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:letterSpacing="0"
+            android:backgroundTint="#3FD679"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

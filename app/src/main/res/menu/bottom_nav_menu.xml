@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/campionati_menu"
+        android:title="Campionati"
+        android:icon="@drawable/coppa"/>
+    <item
+        android:id="@+id/iscrizioni_menu"
+        android:title="Le tue iscrizioni"
+        android:icon="@drawable/bandiera"/>
+    <item
+        android:id="@+id/galleria_menu"
+        android:icon="@drawable/coppa"
+        android:title="Galleria" />
+    <item
+        android:id="@+id/novita_menu"
+        android:title="Novità corse"
+        android:icon="@drawable/referee"/>
+</menu>

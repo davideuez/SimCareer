@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:background="@drawable/border_bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+    <TableRow>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/data_round"
+            android:text="30/01/2020"
+            android:fontFamily="@font/montserrat_light_italic"
+            android:letterSpacing="0"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/circuito_round"
+            android:text="ROUND 1 - Sepang"
+            android:fontFamily="@font/montserrat_extrabold_italic"
+            android:letterSpacing="0"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            android:paddingLeft="50dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/classifica_round"
+            android:background="@drawable/classifiche"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"/>
+
+
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

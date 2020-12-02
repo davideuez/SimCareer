@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModificaProfilo">
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/red"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/lista_campionati"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:text="PROFILO"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/modificaProfilo_btns"
+        android:orientation="horizontal"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/top_bar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Info Personali"
+            android:id="@+id/info_personali"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:textColor="@color/red"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_account"
+            android:text="Info Account"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/montserrat_medium_italic"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/modifica_profiloFrame"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@+id/modificaProfilo_btns" />
+
+
+</RelativeLayout>
