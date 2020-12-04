@@ -6,14 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".Registrazione_2">
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/simcareer_logo"
-        android:background="@drawable/upload_foto"
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/profile_image"
+        android:src="@drawable/profileplaceholder"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:id="@+id/editprofile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignRight="@+id/profile_image"
+        android:layout_marginTop="145dp"
+        android:layout_alignBaseline="@+id/profile_image"
+        android:background="@drawable/editpicture" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +29,7 @@
         android:id="@+id/first_linear"
         android:orientation="vertical"
         android:layout_marginRight="60dp"
-        android:layout_below="@+id/simcareer_logo"
+        android:layout_below="@+id/profile_image"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true">
 

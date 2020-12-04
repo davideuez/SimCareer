@@ -48,12 +48,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:hint="Password"
+            app:passwordToggleEnabled="true"
             app:endIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/password_login"
+                android:inputType="textPassword"
                 android:lines="1"
                 android:fontFamily="@font/montserrat_medium_italic"/>
 

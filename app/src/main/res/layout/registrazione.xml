@@ -67,13 +67,15 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:hint="Password"
-            app:endIconMode="password_toggle"
+            app:passwordToggleEnabled="true"
             app:endIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/password"
+
+                android:inputType="textPassword"
                 android:lines="1"
                 android:fontFamily="@font/montserrat_medium_italic" />
 
@@ -85,13 +87,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:hint="Conferma Password"
-            app:endIconMode="password_toggle"
+            app:passwordToggleEnabled="true"
             app:endIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/conferma_password"
+                android:inputType="textPassword"
                 android:lines="1"
                 android:fontFamily="@font/montserrat_medium_italic" />
 

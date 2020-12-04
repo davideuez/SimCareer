@@ -11,17 +11,29 @@
         android:layout_height="wrap_content"
         android:id="@+id/first_linear"
         android:orientation="vertical"
-        android:padding="30dp"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
         android:layout_centerHorizontal="true">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/modifica_fotoProfilo"
-            android:background="@drawable/upload_foto"
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profile_image"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginTop="30dp"
+            android:src="@drawable/profileplaceholder" />
+
+        <ImageView
+            android:id="@+id/editprofile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignRight="@+id/profile_image"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-70dp"
+            android:layout_marginLeft="50dp"
+            android:layout_alignBaseline="@+id/profile_image"
+            android:background="@drawable/editpicture" />
 
 
         <com.google.android.material.textfield.TextInputLayout
