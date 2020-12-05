@@ -26,7 +26,6 @@ import static android.content.Context.MODE_PRIVATE;
 public class ClassificheFragment extends Fragment {
 
     int posizione;
-    int pilotiInClassifica=0;
     int teamInClassifica=0;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -46,6 +45,9 @@ public class ClassificheFragment extends Fragment {
         inizializzaClassifiche(x.getApplicationContext());
 
         Fragment newFragment = new ClassificaPilotiFragment();
+        Bundle data = new Bundle();//Use bundle to pass data
+        data.putInt("posizione", posizione);
+        newFragment.setArguments(data);
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.lista_classificaFrame, newFragment);
         transaction.commit();
@@ -57,6 +59,9 @@ public class ClassificheFragment extends Fragment {
                 tab2.setTextColor(Color.rgb(0, 0, 0));
 
                 Fragment newFragment = new ClassificaPilotiFragment();
+                Bundle data = new Bundle();//Use bundle to pass data
+                data.putInt("posizione", posizione);
+                newFragment.setArguments(data);
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.lista_classificaFrame, newFragment);
                 transaction.commit();
@@ -116,7 +121,7 @@ public class ClassificheFragment extends Fragment {
 
                 //ottengo la classifica dei piloti
                 JSONArray arrayClassifica = objCampionato.getJSONArray("classifica-piloti");
-
+                int pilotiInClassifica=0;
                 for (int j = 0; j < arrayClassifica.length(); j++) {
                     JSONObject objClassifica = arrayClassifica.getJSONObject(j);
                     String nomeClass = objClassifica.getString("nome");
@@ -124,7 +129,7 @@ public class ClassificheFragment extends Fragment {
                     String auto = objClassifica.getString("auto");
                     int punti = objClassifica.getInt("punti");
                     pilotiInClassifica++;
-                    aggiungiClassificato(idCampionato, j, nomeClass, team, auto, punti);
+                    aggiungiClassificato(idCampionato, j, pilotiInClassifica, nomeClass, team, auto, punti);
 
                 }
 
@@ -146,7 +151,7 @@ public class ClassificheFragment extends Fragment {
 
     }
 
-    void aggiungiClassificato(int idCampionato, int nSeq, String nome, String team, String auto, int punti) {
+    void aggiungiClassificato(int idCampionato, int nSeq, int pilotiInClassifica, String nome, String team, String auto, int punti) {
 
         String MyPREFERENCES = "Classifiche_Campionato" + idCampionato;
         Context x = getContext();

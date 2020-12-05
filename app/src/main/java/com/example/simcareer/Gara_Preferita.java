@@ -58,7 +58,6 @@ public class Gara_Preferita extends AppCompatActivity {
 
                 editor.putString(Name, btn_text);
                 editor.commit();
-                Toast.makeText(Gara_Preferita.this, btn_text + " selezionata",Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(Gara_Preferita.this, Registrazione_Preferenze.class);
                 startActivity(intent);
