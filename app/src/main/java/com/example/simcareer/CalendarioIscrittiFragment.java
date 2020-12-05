@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,7 +41,13 @@ public class CalendarioIscrittiFragment extends Fragment implements CalendarioAd
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().onBackPressed();
+                Fragment newFragment = new InfoMenuFragment();
+                Bundle data = new Bundle();//Use bundle to pass data
+                data.putInt("posizione", posizione);
+                newFragment.setArguments(data);
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.home_infoFrame, newFragment);
+                transaction.commit();
             }
         });
 
@@ -87,5 +94,16 @@ public class CalendarioIscrittiFragment extends Fragment implements CalendarioAd
     @Override
     public void onCalendarioClick(int position) {
         Log.d(TAG, "onCalendarioClick: Cliccato riga "+position);
+
+        Context x = getContext();
+
+        Fragment newFragment = new ClassificheFragment();
+        Bundle data = new Bundle();//Use bundle to pass data
+        data.putInt("posizione", posizione);
+        newFragment.setArguments(data);
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.home_infoFrame, newFragment);
+        transaction.commit();
+
     }
 }
