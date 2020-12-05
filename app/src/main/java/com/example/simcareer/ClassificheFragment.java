@@ -26,7 +26,6 @@ import static android.content.Context.MODE_PRIVATE;
 public class ClassificheFragment extends Fragment {
 
     int posizione;
-    int teamInClassifica=0;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
@@ -75,6 +74,9 @@ public class ClassificheFragment extends Fragment {
                 tab1.setTextColor(Color.rgb(0, 0, 0));
 
                 Fragment newFragment = new ClassificaTeamFragment();
+                Bundle data = new Bundle();//Use bundle to pass data
+                data.putInt("posizione", posizione);
+                newFragment.setArguments(data);
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.lista_classificaFrame, newFragment);
                 transaction.commit();
@@ -134,14 +136,14 @@ public class ClassificheFragment extends Fragment {
                 }
 
                 JSONArray arrayClassificaTeam = objCampionato.getJSONArray("classifica-team");
-
+                int teamInClassifica=0;
                 for (int x = 0; x < arrayClassificaTeam.length(); x++) {
                     JSONObject objClassificaTeam = arrayClassificaTeam.getJSONObject(x);
                     String team = objClassificaTeam.getString("team");
                     String auto = objClassificaTeam.getString("auto");
                     int punti = objClassificaTeam.getInt("punti");
                     teamInClassifica++;
-                    aggiungiTeamClassificato(idCampionato, x, team, auto, punti);
+                    aggiungiTeamClassificato(idCampionato, x, teamInClassifica, team, auto, punti);
                 }
 
             }
@@ -170,7 +172,7 @@ public class ClassificheFragment extends Fragment {
 
     }
 
-    void aggiungiTeamClassificato(int idCampionato, int nSeq, String team, String auto, int punti) {
+    void aggiungiTeamClassificato(int idCampionato, int nSeq, int teamInClassifica, String team, String auto, int punti) {
 
         String MyPREFERENCES = "Classifiche_Team_Campionato" + idCampionato;
         Context x = getContext();
