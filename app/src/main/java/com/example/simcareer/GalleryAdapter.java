@@ -5,6 +5,8 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,42 +15,38 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHolder> {
-    private ArrayList<CreaLista> galleryList;
+public class GalleryAdapter extends BaseAdapter {
+
     private Context context;
+    private int[] images;
 
-    public GalleryAdapter(Context context, ArrayList<CreaLista> galleryList) {
-        this.galleryList = galleryList;
-        this.context = context;
+    public GalleryAdapter(Context c, int[] images) {
+        context = c;
+        this.images = images;
     }
 
-    @Override
-    public GalleryAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.gallery_layout, viewGroup, false);
-        return new ViewHolder(view);
+    // returns the number of images
+    public int getCount() {
+        return images.length;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    @Override
-    public void onBindViewHolder(GalleryAdapter.ViewHolder viewHolder, int i) {
-        viewHolder.img.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        viewHolder.img.setClipToOutline(true);
-        viewHolder.img.setImageResource((galleryList.get(i).getImage_ID()));
+    // returns the ID of an item
+    public Object getItem(int position) {
+        return position;
     }
 
-    @Override
-    public int getItemCount() {
-        return galleryList.size();
+    // returns the ID of an item
+    public long getItemId(int position) {
+        return position;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView title;
-        private ImageView img;
-        public ViewHolder(View view) {
-            super(view);
+    // returns an ImageView view
+    public View getView(int position, View convertView, ViewGroup parent) {
 
-            title = (TextView)view.findViewById(R.id.title);
-            img = (ImageView) view.findViewById(R.id.img);
-        }
+        // create a ImageView programmatically
+        ImageView imageView = new ImageView(context);
+        imageView.setImageResource(images[position]); // set image in ImageView
+        imageView.setLayoutParams(new Gallery.LayoutParams(500, 500)); // set ImageView param
+        return imageView;
     }
 }

@@ -8,6 +8,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Gallery;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -15,91 +19,47 @@ import java.util.ArrayList;
 
 public class GalleriaFotografica extends AppCompatActivity {
 
-    private final String image_titles[] = {
-            "Img1",
-            "Img2",
-            "Img3",
-            "Img4",
-            "Img5",
-            "Img6",
-            "Img7",
-            "Img8",
-            "Img9",
-            "Img10",
-            "Img11",
-            "Img12",
-            "Img13",
-            "Img14",
-            "Img15",
-            "Img16",
-            "Img17",
-            "Img18",
-            "Img19",
-            "Img20",
-            "Img21",
-            "Img22",
-            "Img23",
-            "Img24",
-            "Img25",
-            "Img26",
-            "Img27",
-            "Img28",
-            "Img29",
-            "Img30",
-            "Img31",
-            "Img32",
-            "Img33",
+    private final int image_ids[] = {
+            R.drawable.gte1,
+            R.drawable.gte2,
+            R.drawable.gte3,
+            R.drawable.gte4,
+            R.drawable.gte5,
+            R.drawable.gte6,
+            R.drawable.gte7,
+            R.drawable.gte8,
+            R.drawable.gte9,
+            R.drawable.gte10,
+            R.drawable.gte11,
+            R.drawable.gte12,
+            R.drawable.gte13,
+            R.drawable.gte14,
+            R.drawable.gte15,
     };
 
-    private final Integer image_ids[] = {
-            R.drawable.img1,
-            R.drawable.img2,
-            R.drawable.img3,
-            R.drawable.img4,
-            R.drawable.img5,
-            R.drawable.img6,
-            R.drawable.img7,
-            R.drawable.img8,
-            R.drawable.img9,
-            R.drawable.img10,
-            R.drawable.img11,
-            R.drawable.img12,
-            R.drawable.img13,
-            R.drawable.img14,
-            R.drawable.img15,
-            R.drawable.img16,
-            R.drawable.img17,
-            R.drawable.img18,
-            R.drawable.img19,
-            R.drawable.img20,
-            R.drawable.img21,
-            R.drawable.img22,
-            R.drawable.img23,
-            R.drawable.img24,
-            R.drawable.img25,
-            R.drawable.img26,
-            R.drawable.img27,
-            R.drawable.img28,
-            R.drawable.img29,
-            R.drawable.img30,
-            R.drawable.img31,
-            R.drawable.img32,
-            R.drawable.img33
-    };
+    Gallery simpleGallery;
+    GalleryAdapter customGalleryAdapter;
+    ImageView selectedImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.galleria_fotografica);
 
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.imagegallery);
-        recyclerView.setHasFixedSize(true);
+        Gallery simpleGallery = (Gallery) findViewById(R.id.simpleGallery);
+        selectedImageView = (ImageView) findViewById(R.id.selectedImageView); // get the reference of ImageView
+        customGalleryAdapter = new GalleryAdapter(getApplicationContext(), image_ids); // initialize the adapter
+        simpleGallery.setAdapter(customGalleryAdapter); // set the adapter
+        simpleGallery.setSpacing(10);
+        // perform setOnItemClickListener event on the Gallery
+        simpleGallery.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // set the selected image in the ImageView
+                selectedImageView.setImageResource(image_ids[position]);
 
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),2);
-        recyclerView.setLayoutManager(layoutManager);
-        ArrayList<CreaLista> createLists = prepareData();
-        GalleryAdapter adapter = new GalleryAdapter(getApplicationContext(), createLists);
-        recyclerView.setAdapter(adapter);
+            }
+        });
 
         BottomNavigationView menu = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
 
@@ -132,15 +92,4 @@ public class GalleriaFotografica extends AppCompatActivity {
         });
     }
 
-    private ArrayList<CreaLista> prepareData(){
-
-        ArrayList<CreaLista> theimage = new ArrayList<>();
-        for(int i = 0; i< image_titles.length; i++){
-            CreaLista createList = new CreaLista();
-            createList.setImage_title(image_titles[i]);
-            createList.setImage_ID(image_ids[i]);
-            theimage.add(createList);
-        }
-        return theimage;
-    }
 }
