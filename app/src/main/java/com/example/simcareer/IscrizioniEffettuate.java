@@ -68,7 +68,7 @@ public class IscrizioniEffettuate extends AppCompatActivity implements Copertina
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.novita_menu:
-                        Intent c = new Intent(getApplicationContext(), GalleriaFotografica.class);
+                        Intent c = new Intent(getApplicationContext(), NovitaCorse.class);
                         startActivity(c);
                         overridePendingTransition(0,0);
                         return true;
