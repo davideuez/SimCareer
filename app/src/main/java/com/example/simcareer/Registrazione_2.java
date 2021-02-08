@@ -82,12 +82,6 @@ public class Registrazione_2 extends AppCompatActivity {
         birth = (TextInputEditText)findViewById(R.id.birthday);
         registrazione = (Button)findViewById(R.id.register2_btn);
 
-        name.setText("Davide");
-        surname.setText("Uez");
-        comune1.setText("Malè");
-        prov.setText("TN");
-        birth.setText("28/01/98");
-
         createList();
         createCalendar();
 
@@ -180,7 +174,6 @@ public class Registrazione_2 extends AppCompatActivity {
             private void updateLabel(){
                 String myFormat = "dd/MM/yy"; //In which you need put here
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.ITALY);
-
                 edittext.setText(sdf.format(myCalendar.getTime()));
             }
 

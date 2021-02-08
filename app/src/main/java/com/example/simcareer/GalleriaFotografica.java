@@ -6,11 +6,17 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Gallery;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -40,6 +46,7 @@ public class GalleriaFotografica extends AppCompatActivity {
     Gallery simpleGallery;
     GalleryAdapter customGalleryAdapter;
     ImageView selectedImageView;
+    ImageButton share;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +64,26 @@ public class GalleriaFotografica extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // set the selected image in the ImageView
                 selectedImageView.setImageResource(image_ids[position]);
+
+            }
+        });
+
+        share = findViewById(R.id.share);
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Drawable mDrawable = selectedImageView.getDrawable();
+                Bitmap mBitmap = ((BitmapDrawable) mDrawable).getBitmap();
+
+                String path = MediaStore.Images.Media.insertImage(getContentResolver(), mBitmap, "Descrizione immagine", null);
+                Uri uri = Uri.parse(path);
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("image/jpeg");
+                intent.putExtra(Intent.EXTRA_STREAM, uri);
+                startActivity(Intent.createChooser(intent, "Condividi immagine"));
 
             }
         });

@@ -31,7 +31,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/copertina_campionato"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="@drawable/copertina_campionato_01"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/border_radius"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/copertina_campionato"
         tools:layout_editor_absoluteX="0dp" />
 
     <LinearLayout
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/copertina_campionato">
 
         <TextView
             android:id="@+id/info_dataInizio"

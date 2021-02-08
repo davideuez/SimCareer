@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,6 +42,16 @@ public class CopertinaAdapter extends RecyclerView.Adapter<CopertinaAdapter.View
         holder.nome_campionato.setText(x.getNome_campionato());
         holder.data_inizio.setText(x.getInizio_campionato());
         holder.data_fine.setText(x.getFine_campionato());
+
+        if(position == 0){
+            holder.immagine_copertina.setImageResource(R.drawable.copertina_campionato_01);
+        } else if(position == 1) {
+            holder.immagine_copertina.setImageResource(R.drawable.copertina_campionato_02);
+        } else if(position == 2){
+            holder.immagine_copertina.setImageResource(R.drawable.copertina_campionato_03);
+        }
+
+
     }
 
     @Override

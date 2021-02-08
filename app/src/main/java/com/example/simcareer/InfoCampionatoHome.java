@@ -48,6 +48,15 @@ public class InfoCampionatoHome extends AppCompatActivity {
         data_inizio.setText("Inizio: " + inizio);
         data_fine.setText("Fine: " + fine);
 
+
+        if(N_CAMPIONATO == 0){
+            findViewById(R.id.copertina_campionato).setBackgroundResource(R.drawable.copertina_campionato_01);
+        } else if(N_CAMPIONATO == 1) {
+            findViewById(R.id.copertina_campionato).setBackgroundResource(R.drawable.copertina_campionato_02);
+        } else if(N_CAMPIONATO == 2){
+            findViewById(R.id.copertina_campionato).setBackgroundResource(R.drawable.copertina_campionato_03);
+        }
+
         Fragment newFragment = new InfoMenuFragment();
         Bundle data = new Bundle();//Use bundle to pass data
         data.putInt("posizione", posizione);

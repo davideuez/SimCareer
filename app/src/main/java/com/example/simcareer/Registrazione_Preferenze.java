@@ -118,7 +118,7 @@ public class Registrazione_Preferenze extends AppCompatActivity {
             cominciamo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(getApplicationContext(), Login.class);
+                    Intent i = new Intent(getApplicationContext(), Home_Campionati.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.slide_in_right,  R.anim.slide_out_left);
                 }
